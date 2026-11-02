@@ -1,0 +1,10 @@
+
+# Environment files
+.env
+.env.*
+!.env.example
+frontend/.env
+backend/.env
+
+# Private JWT configuration
+backend/config/local.php

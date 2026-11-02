@@ -1,0 +1,295 @@
+/* frontend/src/index.css */
+@import 'bootstrap/dist/css/bootstrap.min.css';
+@import 'bootstrap-icons/font/bootstrap-icons.css';
+
+:root {
+  --primary: #1F3B62;
+  --secondary: #6B7F99;
+  --muted: #A7B1BD;
+  --neutral: #D9D6CE;
+  --background: #F7F9FC;
+
+  --font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+
+  /* Semantic UI mappings */
+  --bs-primary: #1F3B62;
+  --bs-primary-rgb: 31, 59, 98;
+  --bs-secondary: #6B7F99;
+  --bs-secondary-rgb: 107, 127, 153;
+  --bs-body-font-family: var(--font-family);
+  --bs-body-bg: #F7F9FC;
+  --bs-body-color: #1F2937;
+  --bs-border-color: #D9D6CE;
+}
+
+body {
+  font-family: var(--font-family);
+  background-color: var(--background);
+  color: #1F2937;
+  margin: 0;
+  padding: 0;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* Operational UI Clean Architecture */
+.navbar-custom {
+  background-color: var(--primary);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.navbar-custom .navbar-brand,
+.navbar-custom .nav-link {
+  color: #F7F9FC;
+  font-weight: 500;
+  font-size: 0.925rem;
+}
+
+.navbar-custom .nav-link:hover,
+.navbar-custom .nav-link.active {
+  color: #FFFFFF;
+}
+
+/* Cards: Simple rectangular cards with subtle borders */
+.card {
+  border-radius: 4px;
+  border: 1px solid var(--neutral);
+  background: #FFFFFF;
+  box-shadow: 0 1px 2px rgba(31, 59, 98, 0.04);
+}
+
+.card-header {
+  background-color: #FFFFFF;
+  border-bottom: 1px solid var(--neutral);
+  font-weight: 600;
+  color: var(--primary);
+  padding: 0.85rem 1.15rem;
+}
+
+/* Buttons: Solid navy blue, modest rounded corners */
+.btn-primary {
+  background-color: var(--primary);
+  border-color: var(--primary);
+  color: #FFFFFF;
+  font-weight: 500;
+  border-radius: 4px;
+  padding: 0.45rem 1rem;
+  font-size: 0.9rem;
+  transition: background-color 0.15s ease, border-color 0.15s ease;
+}
+
+.btn-primary:hover,
+.btn-primary:focus {
+  background-color: #162B48;
+  border-color: #162B48;
+  color: #FFFFFF;
+}
+
+.btn-outline-primary {
+  color: var(--primary);
+  border-color: var(--primary);
+  border-radius: 4px;
+  font-weight: 500;
+}
+
+.btn-outline-primary:hover {
+  background-color: var(--primary);
+  border-color: var(--primary);
+  color: #FFFFFF;
+}
+
+.btn-secondary {
+  background-color: var(--secondary);
+  border-color: var(--secondary);
+  border-radius: 4px;
+}
+
+/* Modest rounded corners for inputs */
+.form-control,
+.form-select {
+  border-radius: 4px;
+  border: 1px solid var(--neutral);
+  font-size: 0.9rem;
+  padding: 0.45rem 0.75rem;
+  color: #1F2937;
+}
+
+.form-control:focus,
+.form-select:focus {
+  border-color: var(--primary);
+  box-shadow: 0 0 0 0.2rem rgba(31, 59, 98, 0.15);
+}
+
+/* Clean operational tables */
+.table {
+  font-size: 0.875rem;
+  margin-bottom: 0;
+  vertical-align: middle;
+}
+
+.table th {
+  background-color: #F1F4F8;
+  color: var(--primary);
+  font-weight: 600;
+  border-bottom: 1px solid var(--neutral);
+  padding: 0.65rem 0.85rem;
+  text-transform: uppercase;
+  font-size: 0.75rem;
+  letter-spacing: 0.03em;
+}
+
+.table td {
+  padding: 0.65rem 0.85rem;
+  border-bottom: 1px solid #ECEAE4;
+}
+
+/* Badges */
+.badge {
+  font-weight: 500;
+  font-size: 0.75rem;
+  border-radius: 3px;
+  padding: 0.35em 0.6em;
+}
+
+.badge-approved, .badge-delivered, .badge-active, .badge-successful {
+  background-color: #E6F4EA;
+  color: #137333;
+  border: 1px solid #CEEAD6;
+}
+
+.badge-pending, .badge-testing, .badge-processing, .badge-quoted {
+  background-color: #FEF7E0;
+  color: #B06000;
+  border: 1px solid #FEEFC3;
+}
+
+.badge-confirmed, .badge-ready, .badge-out_for_delivery, .badge-assigned {
+  background-color: #E8F0FE;
+  color: #1A73E8;
+  border: 1px solid #D2E3FC;
+}
+
+.badge-cancelled, .badge-rejected, .badge-failed, .badge-damaged {
+  background-color: #FCE8E6;
+  color: #C5221F;
+  border: 1px solid #FAD2CF;
+}
+
+/* Sidebar styling for Admin / Staff */
+.admin-sidebar {
+  width: 250px;
+  background-color: #FFFFFF;
+  border-right: 1px solid var(--neutral);
+  min-height: calc(100vh - 56px);
+}
+
+.admin-sidebar .sidebar-heading {
+  font-size: 0.7rem;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: var(--secondary);
+  padding: 1rem 1.25rem 0.35rem;
+  font-weight: 700;
+}
+
+.admin-sidebar .nav-link {
+  color: #374151;
+  font-size: 0.875rem;
+  padding: 0.55rem 1.25rem;
+  display: flex;
+  align-items: center;
+  gap: 0.65rem;
+  border-left: 3px solid transparent;
+}
+
+.admin-sidebar .nav-link:hover {
+  background-color: #F1F4F8;
+  color: var(--primary);
+}
+
+.admin-sidebar .nav-link.active {
+  background-color: #EAF0F7;
+  color: var(--primary);
+  font-weight: 600;
+  border-left-color: var(--primary);
+}
+
+/* Metric / Stat Cards */
+.stat-card {
+  background: #FFFFFF;
+  border: 1px solid var(--neutral);
+  border-radius: 4px;
+  padding: 1rem 1.15rem;
+}
+
+.stat-card .stat-label {
+  font-size: 0.775rem;
+  text-transform: uppercase;
+  color: var(--secondary);
+  font-weight: 600;
+  letter-spacing: 0.02em;
+  margin-bottom: 0.25rem;
+}
+
+.stat-card .stat-value {
+  font-size: 1.65rem;
+  font-weight: 700;
+  color: var(--primary);
+  line-height: 1.2;
+}
+
+.stat-card .stat-subtext {
+  font-size: 0.775rem;
+  color: #6B7280;
+  margin-top: 0.25rem;
+}
+
+/* Timeline tracking */
+.order-timeline {
+  position: relative;
+  padding-left: 28px;
+}
+
+.order-timeline::before {
+  content: '';
+  position: absolute;
+  left: 9px;
+  top: 6px;
+  bottom: 6px;
+  width: 2px;
+  background-color: var(--neutral);
+}
+
+.timeline-step {
+  position: relative;
+  margin-bottom: 1.25rem;
+}
+
+.timeline-step:last-child {
+  margin-bottom: 0;
+}
+
+.timeline-dot {
+  position: absolute;
+  left: -28px;
+  top: 2px;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background-color: #FFFFFF;
+  border: 2px solid var(--neutral);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.timeline-dot.active {
+  border-color: var(--primary);
+  background-color: var(--primary);
+  color: #FFFFFF;
+}
+
+.timeline-dot.completed {
+  border-color: #137333;
+  background-color: #137333;
+  color: #FFFFFF;
+}
